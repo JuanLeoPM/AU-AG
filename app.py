@@ -46,7 +46,7 @@ def load_data():
 dates = pd.date_range(start="2023-01-01", end=datetime.now())
 return pd.DataFrame({
 "date": dates,
-"xau": 1800 + np.cumsum(np.random.normal(0, 5, len(dates)) + np.sin(np.linspace(0, 10, len(dates)) * 50,
+"xau": 1800 + np.cumsum(np.random.normal(0, 5, len(dates)) + np.sin(np.linspace(0, 10, len(dates)) * 50)),
 "xag": 22 + np.cumsum(np.random.normal(0, 0.5, len(dates))) + np.sin(np.linspace(0, 10, len(dates)) * 0.8),
 "dxy": 100 + np.random.normal(0, 2, len(dates)),
 "interest_rate": np.linspace(1.5, 5.0, len(dates))
